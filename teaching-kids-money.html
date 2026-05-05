@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+<script>
+  (function() {
+    var link = document.createElement('link');
+    link.rel = 'canonical';
+    
+    var protocol = window.location.protocol + '//';
+    var host = window.location.host;
+    var path = window.location.pathname;
+    
+    var cleanPath = path.replace(/\/(index\.html|index)$|(\.html)$/i, '');
+    
+    if (cleanPath.length > 0 && !cleanPath.startsWith('/')) {
+        cleanPath = '/' + cleanPath;
+    }
+    
+    var finalUrl = protocol + host + (cleanPath === '/' ? '' : cleanPath);
+    
+    link.href = finalUrl;
+    document.head.appendChild(link);
+  })();
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Teaching Kids About Money - Daily Expense Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body { font-family: -apple-system, sans-serif; background-color: #f8fafc; color: #0f172a; } .article-body p { margin-bottom: 1.5rem; line-height: 1.8; color: #475569; }</style>
+</head>
+<body>
+<div class="max-w-3xl mx-auto px-4 py-12">
+    <a href="news" class="text-xs font-black text-slate-400 hover:text-indigo-600 transition-colors uppercase tracking-widest block mb-8">← BACK TO NEWS</a>
+    <h1 class="text-4xl font-black text-slate-900 leading-tight mb-8">Teaching Kids About Money in a Cashless Society</h1>
+    <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d2d?auto=format&fit=crop&q=80&w=1000" class="w-full h-80 object-cover rounded-[32px] mb-12">
+    <div class="article-body">
+        <p>In a world of credit cards and taps, kids often don't see money as a finite resource. Use visual aids and physical jars to teach them the value of a dollar.</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+<script>
+  (function() {
+    var link = document.createElement('link');
+    link.rel = 'canonical';
+    
+    var protocol = window.location.protocol + '//';
+    var host = window.location.host;
+    var path = window.location.pathname;
+    
+    var cleanPath = path.replace(/\/(index\.html|index)$|(\.html)$/i, '');
+    
+    if (cleanPath.length > 0 && !cleanPath.startsWith('/')) {
+        cleanPath = '/' + cleanPath;
+    }
+    
+    var finalUrl = protocol + host + (cleanPath === '/' ? '' : cleanPath);
+    
+    link.href = finalUrl;
+    document.head.appendChild(link);
+  })();
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Emergency Fund 101 - Daily Expense Tracker</title>
+    <meta name="description" content="A beginner's guide to building your first financial safety net from scratch.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --radius: 20px; --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.08); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .article-body p { margin-bottom: 1.5rem; line-height: 1.8; color: #475569; font-size: 1.1rem; }
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #020617; color: #f8fafc; }
+            .article-body p { color: #cbd5e1; }
+        }
+    </style>
+</head>
+<body>
+<div class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="flex justify-between items-center mb-12">
+        <a href="news" class="flex items-center gap-2 text-xs font-black text-slate-400 hover:text-indigo-600 transition-colors uppercase tracking-widest">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            BACK TO NEWS
+        </a>
+    </nav>
+    <header class="mb-10">
+        <span class="text-[10px] font-black text-slate-600 bg-slate-50 dark:bg-slate-900/30 px-3 py-1.5 rounded-md uppercase tracking-tighter mb-4 inline-block">Basics</span>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] mb-8">Emergency Fund 101: Starting from Zero Dollars</h1>
+        <img src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?auto=format&fit=crop&q=80&w=1000" class="w-full h-80 object-cover rounded-[32px] shadow-2xl mb-12">
+    </header>
+    <div class="article-body">
+        <p>The first step in any financial journey isn't investing—it's safety. An emergency fund is the buffer that prevents a car repair or a medical bill from turning into high-interest credit card debt.</p>
+        <p>Start small. Your first goal should be $1,000. It sounds impossible when you're living paycheck to paycheck, but using a tracker to find just $33 a day for one month will get you there.</p>
+    </div>
+</div>
+</body>
+</html>

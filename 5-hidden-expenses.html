@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+<script>
+  (function() {
+    var link = document.createElement('link');
+    link.rel = 'canonical';
+    
+    var protocol = window.location.protocol + '//';
+    var host = window.location.host;
+    var path = window.location.pathname;
+    
+    var cleanPath = path.replace(/\/(index\.html|index)$|(\.html)$/i, '');
+    
+    if (cleanPath.length > 0 && !cleanPath.startsWith('/')) {
+        cleanPath = '/' + cleanPath;
+    }
+    
+    var finalUrl = protocol + host + (cleanPath === '/' ? '' : cleanPath);
+    
+    link.href = finalUrl;
+    document.head.appendChild(link);
+  })();
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>5 Hidden Expenses Leaking Your Budget - Daily Expense Tracker</title>
+    <meta name="description" content="Discover the small, recurring expenses that are quietly draining your bank account every month.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --radius: 20px; --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.08); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .premium-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.03); }
+        .article-body p { margin-bottom: 1.5rem; line-height: 1.8; color: #475569; font-size: 1.1rem; }
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #020617; color: #f8fafc; }
+            .premium-card { background: #1e293b; border-color: rgba(255,255,255,0.05); }
+            .article-body p { color: #cbd5e1; }
+        }
+    </style>
+</head>
+<body>
+<div class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="flex justify-between items-center mb-12">
+        <a href="news" class="flex items-center gap-2 text-xs font-black text-slate-400 hover:text-indigo-600 transition-colors uppercase tracking-widest">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            BACK TO NEWS
+        </a>
+    </nav>
+    <header class="mb-10">
+        <span class="text-[10px] font-black text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30 px-3 py-1.5 rounded-md uppercase tracking-tighter mb-4 inline-block">Saving</span>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] mb-8">5 Hidden Expenses Leaking Your Monthly Budget</h1>
+        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=1000" class="w-full h-80 object-cover rounded-[32px] shadow-2xl mb-12">
+    </header>
+    <div class="article-body">
+        <p>Financial leaks are the silent killers of wealth. They are the $5 to $15 charges that you barely notice on your bank statement, but when added together, they could be costing you thousands of dollars a year.</p>
+        <h2 class="text-2xl font-black mb-4">1. The Subscription Sludge</h2>
+        <p>From streaming services to "pro" versions of apps you rarely use, digital subscriptions are often the biggest leaks. Check your Apple or Google Play subscriptions today.</p>
+        <h2 class="text-2xl font-black mb-4">2. The Convenience Premium</h2>
+        <p>Food delivery apps often charge a 30% markup on food, plus dynamic delivery fees and tips. Moving to a "pickup only" model could save you $200 a month.</p>
+    </div>
+</div>
+</body>
+</html>

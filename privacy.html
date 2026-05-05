@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+<script>
+  (function() {
+    var link = document.createElement('link');
+    link.rel = 'canonical';
+    
+    var protocol = window.location.protocol + '//';
+    var host = window.location.host;
+    var path = window.location.pathname;
+    
+    var cleanPath = path.replace(/\/(index\.html|index)$|(\.html)$/i, '');
+    
+    if (cleanPath.length > 0 && !cleanPath.startsWith('/')) {
+        cleanPath = '/' + cleanPath;
+    }
+    
+    var finalUrl = protocol + host + (cleanPath === '/' ? '' : cleanPath);
+    
+    link.href = finalUrl;
+    document.head.appendChild(link);
+  })();
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Privacy Policy - Daily Expense Tracker</title>
+    <meta name="description" content="Read our privacy policy to understand how we protect your financial data and why we prioritize your security.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --radius: 24px;
+            --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .premium-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #020617; color: #f8fafc; }
+            .premium-card { background: #1e293b; border-color: rgba(255,255,255,0.05); }
+        }
+
+        .policy-content h2 {
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -0.025em;
+            color: #0f172a;
+        }
+
+        .dark .policy-content h2 { color: #f8fafc; }
+
+        .policy-content p, .policy-content li {
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+
+        .dark .policy-content p, .dark .policy-content li { color: #cbd5e1; }
+    </style>
+</head>
+<body>
+
+<div class="max-w-4xl mx-auto px-4 py-12 md:py-20 font-sans">
+    
+    <!-- Top Nav -->
+    <nav class="flex justify-between items-center mb-16">
+        <a href="" class="group">
+            <h1 class="text-3xl font-black tracking-tighter text-slate-900 dark:text-white group-hover:text-indigo-600 transition-colors">SECURE<span class="text-indigo-600">.</span></h1>
+            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">Privacy First</p>
+        </a>
+        <a href="" class="text-xs font-black text-slate-500 uppercase tracking-widest bg-slate-100 dark:bg-slate-800 px-6 py-3 rounded-full hover:bg-slate-200 transition-colors">
+            BACK TO HOME
+        </a>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-16">
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-4">Privacy Policy</h1>
+        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Effective Date: May 5, 2026</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="policy-content">
+        <div class="premium-card p-8 md:p-12 mb-12 border-l-8 border-emerald-500 bg-emerald-50/10 dark:bg-emerald-900/5">
+            <p class="text-lg font-medium italic">At DailyExpenseTracker.org, we take your financial privacy seriously. This Privacy Policy outlines how we handle information when you use our web application, including the "Money Audit" and "Life Energy Traded" features.</p>
+        </div>
+
+        <h2>1. Our "Privacy-First" Philosophy</h2>
+        <p>Unlike traditional financial apps, DailyExpenseTracker.org is built as a client-side utility. This means that the core functionality of the app—from inputting your "Monthly Income" to generating your "Financial Reality Check"—happens directly within your own web browser.</p>
+
+        <h2>2. Information We Do Not Collect</h2>
+        <p>We believe that your financial data is your business. We operate under these strict protocols:</p>
+        <ul class="list-disc pl-6 space-y-2 mb-8">
+            <li><strong>No Server-Side Storage:</strong> We do not store your transaction details, income, or budget on our servers.</li>
+            <li><strong>No Personal Accounts:</strong> We do not require a login or registration process to use our tool.</li>
+            <li><strong>No Financial Records Access:</strong> We never ask for your bank account numbers or sensitive credentials.</li>
+        </ul>
+
+        <h2>3. How Data is Processed</h2>
+        <p><strong>Local Storage:</strong> All financial data you enter, such as your "Itemized Breakdown" (e.g., Coffee, Pizza, Uber), is processed locally in your browser to calculate your "Burn Rate" and "Life Energy".</p>
+        <p><strong>PDF Generation:</strong> When you click "Save as PDF Report," the document is generated confidentially within your browser environment.</p>
+        <p><strong>Streak Tracking:</strong> To maintain your "STREAK" (e.g., 1 Days), a small piece of data may be stored in your browser's local storage so the count remains active for your next visit.</p>
+
+        <h2>4. Third-Party Services & Advertising</h2>
+        <p>To keep this tool free and accessible for everyone, we may display advertisements through third-party partners like Google AdSense. These partners may use cookies to serve ads based on your prior visits to our website or other websites on the internet. You may opt out of personalized advertising by visiting your Google Ad Settings.</p>
+
+        <h2>5. Data Security</h2>
+        <p>Because "No data was stored on servers," your financial information is as secure as your own device. Once you close your browser tab or clear your browser's cache, your session data is removed. We recommend that you independently verify all figures before making significant financial decisions.</p>
+
+        <h2>6. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our tool's features or legal requirements. Any updates will be posted on this page with an updated "Effective Date."</p>
+
+        <h2>7. Contact Us</h2>
+        <div class="premium-card p-8 bg-slate-900 text-white">
+            <p class="mb-4">If you have any questions regarding this Privacy Policy or the security of our "Daily Money Checkup" tool, please contact us at:</p>
+            <div class="space-y-2">
+                <p class="font-bold flex items-center gap-2">
+                    <span class="text-indigo-400">Email:</span> hello@dailyexpensetracker.org
+                </p>
+                <p class="font-bold flex items-center gap-2">
+                    <span class="text-indigo-400">Website:</span> DailyExpenseTracker.org
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Nav -->
+    <nav class="mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 flex flex-wrap justify-center gap-x-8 gap-y-3">
+        <a href="" class="text-[11px] font-black text-slate-400 hover:text-indigo-600 uppercase tracking-[0.2em] transition-all">Home</a>
+        <a href="about" class="text-[11px] font-black text-slate-400 hover:text-indigo-600 uppercase tracking-[0.2em] transition-all">About</a>
+        <a href="news" class="text-[11px] font-black text-slate-400 hover:text-indigo-600 uppercase tracking-[0.2em] transition-all">News</a>
+        <a href="privacy" class="text-[11px] font-black text-indigo-600 uppercase tracking-[0.2em] transition-all">Privacy</a>
+        <a href="terms" class="text-[11px] font-black text-slate-400 hover:text-indigo-600 uppercase tracking-[0.2em] transition-all">Terms</a>
+    </nav>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+<script>
+  (function() {
+    var link = document.createElement('link');
+    link.rel = 'canonical';
+    
+    var protocol = window.location.protocol + '//';
+    var host = window.location.host;
+    var path = window.location.pathname;
+    
+    var cleanPath = path.replace(/\/(index\.html|index)$|(\.html)$/i, '');
+    
+    if (cleanPath.length > 0 && !cleanPath.startsWith('/')) {
+        cleanPath = '/' + cleanPath;
+    }
+    
+    var finalUrl = protocol + host + (cleanPath === '/' ? '' : cleanPath);
+    
+    link.href = finalUrl;
+    document.head.appendChild(link);
+  })();
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Us - Daily Expense Tracker</title>
+    <meta name="description" content="Learn more about DailyExpenseTracker.org, our mission for financial clarity, and our privacy-first approach to expense tracking.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --radius: 24px;
+            --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .premium-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #020617; color: #f8fafc; }
+            .premium-card { background: #1e293b; border-color: rgba(255,255,255,0.05); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="max-w-4xl mx-auto px-4 py-12 md:py-20 font-sans">
+    
+    <!-- Top Nav -->
+    <nav class="flex justify-between items-center mb-16">
+        <a href="" class="group">
+            <h1 class="text-3xl font-black tracking-tighter text-slate-900 dark:text-white group-hover:text-indigo-600 transition-colors">BACK<span class="text-indigo-600">.</span></h1>
+            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">Home</p>
+        </a>
+        <a href="news" class="text-xs font-black text-indigo-600 uppercase tracking-widest bg-indigo-50 dark:bg-indigo-900/30 px-6 py-3 rounded-full hover:bg-indigo-100 transition-colors">
+            NEWS & ARTICLES
+        </a>
+    </nav>
+
+    <!-- Main Header -->
+    <header class="mb-16 text-center">
+        <h2 class="text-xs font-black text-indigo-600 uppercase tracking-[0.4em] mb-4">The Organization</h2>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-8">About DailyExpenseTracker.org</h1>
+        <p class="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">Financial freedom doesn’t start with a high salary—it starts with awareness.</p>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="premium-card p-8 md:p-12 mb-12 border-l-8 border-indigo-600">
+        <h2 class="text-2xl font-black text-slate-900 dark:text-white mb-6 uppercase italic">Our Mission: Financial Clarity for Everyone</h2>
+        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">At DailyExpenseTracker.org, we believe that financial freedom starting with awareness is the key. Our mission is to provide a world-class, accessible, and high-precision utility for individuals and small business owners to monitor their daily spending habits without the complexity of traditional accounting software.</p>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">As an independent digital resource, we are committed to bridging the gap between "earning" and "saving" by offering transparent, data-driven tools that transform raw numbers into actionable financial insights.</p>
+    </section>
+
+    <!-- Why Trust Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="premium-card p-8 flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <h3 class="text-sm font-black text-slate-900 dark:text-white mb-4 uppercase">1. Privacy-First</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">We operate on a Zero-Data-Storage principle. Your data remains in your local browser environment.</p>
+        </div>
+        <div class="premium-card p-8 flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <h3 class="text-sm font-black text-slate-900 dark:text-white mb-4 uppercase">2. High Precision</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Our reporting engine converts daily logs into professional PDF audits for instant financial clarity.</p>
+        </div>
+        <div class="premium-card p-8 flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h3 class="text-sm font-black text-slate-900 dark:text-white mb-4 uppercase">3. Expert Utility</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Built by developers passionate about Functional Minimalism to remove the friction of budgeting.</p>
+        </div>
+    </div>
+
+    <!-- Story & Offer -->
+    <div class="space-y-12 mb-16">
+        <div>
+            <h2 class="text-xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">Our Story</h2>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">DailyExpenseTracker.org was established to simplify the way the world views daily transactions. In an era of "invisible spending" through digital subscriptions and contactless payments, it is easier than ever to lose track of where your money goes.</p>
+            <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">We saw a need for a "Neutral Ground"—a platform that isn't owned by a bank or a lending company. We are a utility first, a resource second, and a commercial entity last.</p>
+        </div>
+
+        <div>
+            <h2 class="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tighter">What We Offer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
+                    <h4 class="font-black text-slate-900 dark:text-white text-sm mb-2">Instant Daily Logging</h4>
+                    <p class="text-xs text-slate-500">A lightweight interface designed for speed and accuracy.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
+                    <h4 class="font-black text-slate-900 dark:text-white text-sm mb-2">Professional PDF Exports</h4>
+                    <p class="text-xs text-slate-500">Clean, ready-to-print reports for personal filing or tax preparation.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 md:col-span-2">
+                    <h4 class="font-black text-slate-900 dark:text-white text-sm mb-2">Financial Education</h4>
+                    <p class="text-xs text-slate-500">A growing library of resources focused on mindful spending and budget optimization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="premium-card p-10 bg-slate-900 text-white text-center border-0">
+        <h2 class="text-2xl font-black mb-4 uppercase italic">Contact & Transparency</h2>
+        <p class="text-slate-400 text-sm mb-8 leading-relaxed max-w-xl mx-auto">We value the feedback of our global community. Gain control of your financial journey today.</p>
+        
+        <div class="flex flex-col md:flex-row justify-center gap-8 text-sm">
+            <div>
+                <p class="text-indigo-400 font-bold uppercase text-[10px] mb-2 tracking-widest">General Inquiries</p>
+                <p class="font-bold underline">hello@dailyexpensetracker.org</p>
+            </div>
+            <div class="md:border-l md:border-slate-800 md:pl-8">
+                <p class="text-indigo-400 font-bold uppercase text-[10px] mb-2 tracking-widest">Technical Support</p>
+                <p class="font-bold underline">support@dailyexpensetracker.org</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Nav -->
+    <nav class="mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 flex flex-wrap justify-center gap-x-8 gap-y-3">
+        <a href="" class="text-[11px] font-black text-slate-400 hover:text-indigo-600 uppercase tracking-[0.2em] transition-all">Home</a>
+        <a href="about" class="text-[11px] font-black text-indigo-600 uppercase tracking-[0.2em] transition-all">About</a>
+        <a href="news" class="text-[11px] font-black text-slate-400 hover:text-indigo-600 uppercase tracking-[0.2em] transition-all">News</a>
+        <a href="privacy" class="text-[11px] font-black text-slate-400 hover:text-indigo-600 uppercase tracking-[0.2em] transition-all">Privacy</a>
+        <a href="terms" class="text-[11px] font-black text-slate-400 hover:text-indigo-600 uppercase tracking-[0.2em] transition-all">Terms</a>
+    </nav>
+
+</div>
+
+</body>
+</html>

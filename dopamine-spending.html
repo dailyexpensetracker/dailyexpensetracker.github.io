@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+<script>
+  (function() {
+    var link = document.createElement('link');
+    link.rel = 'canonical';
+    
+    var protocol = window.location.protocol + '//';
+    var host = window.location.host;
+    var path = window.location.pathname;
+    
+    var cleanPath = path.replace(/\/(index\.html|index)$|(\.html)$/i, '');
+    
+    if (cleanPath.length > 0 && !cleanPath.startsWith('/')) {
+        cleanPath = '/' + cleanPath;
+    }
+    
+    var finalUrl = protocol + host + (cleanPath === '/' ? '' : cleanPath);
+    
+    link.href = finalUrl;
+    document.head.appendChild(link);
+  })();
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Dopamine of Spending - Daily Expense Tracker</title>
+    <meta name="description" content="Understand the brain chemistry behind impulse purchases and how to reclaim your financial peace.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --radius: 20px; --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.08); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .premium-card { background: white; border-radius: var(--radius); box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.03); }
+        .article-body p { margin-bottom: 1.5rem; line-height: 1.8; color: #475569; font-size: 1.1rem; }
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #020617; color: #f8fafc; }
+            .premium-card { background: #1e293b; border-color: rgba(255,255,255,0.05); }
+            .article-body p { color: #cbd5e1; }
+        }
+    </style>
+</head>
+<body>
+<div class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="flex justify-between items-center mb-12">
+        <a href="news" class="flex items-center gap-2 text-xs font-black text-slate-400 hover:text-indigo-600 transition-colors uppercase tracking-widest">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            BACK TO NEWS
+        </a>
+    </nav>
+    <header class="mb-10">
+        <span class="text-[10px] font-black text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1.5 rounded-md uppercase tracking-tighter mb-4 inline-block">Psychology</span>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] mb-8">The Dopamine of Spending vs. The Peace of Saving</h1>
+        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1000" class="w-full h-80 object-cover rounded-[32px] shadow-2xl mb-12">
+    </header>
+    <div class="article-body">
+        <p>Why is it so hard to say no to that shiny new gadget? The answer lies deep within your brain's reward system. Modern marketing is expertly tuned to trigger a surge of dopamine—the "anticipation" chemical—whenever we consider a purchase.</p>
+        <p>However, the dopamine hit is short-lived. It often leads to "buyer's remorse," a crash in mood that follows the temporary high of acquisition. In contrast, the peace of saving provides a long-term, stable state of serotonin-based satisfaction.</p>
+    </div>
+</div>
+</body>
+</html>
